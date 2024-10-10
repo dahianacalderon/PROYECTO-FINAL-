@@ -1,0 +1,18 @@
+
+{% load static %}
+{% block content %}
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+</head>
+<body>
+    <h1>Bienvenido a tu perfil</h1>
+    <p>Has iniciado sesión correctamente.</p>
+    <a href="{% url 'layout' %}">Cerrar sesión</a>  <!-- Asegúrate de tener la URL de logout configurada -->
+</body>
+</html>
+{% endblock %}

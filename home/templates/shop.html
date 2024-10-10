@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+<div class="container">
+    <h1 class="h2 pb-4 text-center" style="margin-top: 20px;">Productos</h1>
+    <div class="col-lg-12 mx-auto">
+        <form action="{% url 'buscar' %}" method="get" class="text-center mb-4">
+            <input type="text" name="q" placeholder="Buscar productos..." required>
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+
+    <div class="productos">
+        {% for producto in productos %}
+            <div class="producto">
+                <h2>{{ producto.nombre }}</h2>
+                <img src="{{ producto.img.url }}" alt="{{ producto.nombre }}">
+                <p>{{ producto.descripcion }}</p>
+                <p class="precio">Precio: ${{ producto.precio }}</p>
+                <ul class="list-unstyled">
+                    <li>
+                        <a class="btn btn-success text-white mt-2" href="{% url 'agregar_al_car' producto.id %}">
+                            <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        {% empty %}
+            <p>No hay productos disponibles.</p>
+        {% endfor %}
+    </div>
+    
+
+    <div class="paginacion">
+        <ul class="pagination pagination-lg justify-content-end">
+            <li class="page-item disabled">
+                <a class="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="{% url "shop" %}" tabindex="-1">1</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="{% url "shop" %}">2</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link rounded-0 shadow-sm border-top-0 border-left-0 text-dark" href="#">3</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

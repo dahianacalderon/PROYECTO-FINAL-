@@ -1,0 +1,172 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+
+   <!-- Start Banner Hero -->
+   <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="row p-5">
+                    <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                        <img class="img-fluid" src="{% static "img/portada.jpg" %}" alt="">
+                    </div>
+                    <div class="col-lg-6 mb-0 d-flex align-items-center">
+                        <div class="text-align-left align-self-center">
+                            <h1 class="h1 text-success"><b></b> Credicascos</h1>
+                            <h3 class="h2"></h3>
+                            <p>
+                                Credicasco ofrece una amplia gama de accesorios de alta calidad para motociclistas, como cascos, rodilleras, guantes, botas y chalecos, diseñados para garantizar seguridad y estilo en cada viaje. <a rel="sponsored" class="text-success" href="https://templatemo.com" target="_blank"></a>
+                                <a rel="sponsored" class="text-success" href="https://stories.freepik.com/" target="_blank"></a>
+                                <a rel="sponsored" class="text-success" href="https://unsplash.com/" target="_blank"></a>
+                                <a rel="sponsored" class="text-success" href="https://icons8.com/" target="_blank"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+        <i class="fas fa-chevron-left"></i>
+    </a>
+    <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
+        <i class="fas fa-chevron-right"></i> -->
+    </a>
+</div>
+<!-- End Banner Hero -->
+
+
+<!-- Start Categories of The Month -->
+<section class="container py-5">
+    <div class="row text-center pt-3">
+        <div class="col-lg-6 m-auto">
+            <h1 class="h1">Categorias</h1>
+            <p>
+
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-4 p-5 mt-3">
+            <a href="#"><img src="{% static "img/CASCO1.jpg" %}" class="rounded-circle img-fluid border" ></a>
+            <h5 class="text-center mt-3 mb-3">Cascos</h5>
+            <p class="text-center">
+                <a class="btn btn-success" href="{% url 'shop' %}">Go Shop</a>
+              </p>
+        </div>
+        <div class="col-12 col-md-4 p-5 mt-3">
+            <a href="#"><img src="{% static "img/chaleco1.jpg" %}" class="rounded-circle img-fluid border" style="width: 400px; height: 350px;"></a>
+            <h2 class="h5 text-center mt-3 mb-3">Chalecos</h2>
+            <p class="text-center">
+                <a class="btn btn-success" href="{% url 'shop' %}">Go Shop</a>
+              </p>
+        </div>
+        <div class="col-12 col-md-4 p-5 mt-3" id="3">
+            <a href="#"><img src="{% static "img/equipaje.jpg" %}" class="rounded-circle img-fluid border" style="width: 400px; height: 350px;"></a>
+            <h2 class="h5 text-center mt-3 mb-3">Equipajes</h2>
+            <p class="text-center">
+                <a class="btn btn-success" href="{% url 'shop' %}">Go Shop</a>
+              </p>
+        </div>
+    </div>
+</section>
+<!-- End Categories of The Month -->
+
+
+{% comment %} <!-- Start Featured Product -->
+<section class="bg-light">
+    <div class="container py-5">
+        <div class="row text-center py-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Producto Destacado</h1>
+                <p>
+                    
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card h-100">
+                    <a href="shop-single.html">
+                        <img src="{% static "img/destacado1.jpg" %}" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <ul class="list-unstyled d-flex justify-content-between">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                            <li class="text-muted text-right">$240.000</li>
+                        </ul>
+                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Guantes de Motocicletas</a>
+                        <p class="card-text">
+                        Guantes resistentes con protección en nudillos y palmas antideslizantes. Ofrecen comodidad y control en la conducción, ideales para cualquier terreno.
+                        </p>
+                        <p class="text-muted">Reviews (24)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card h-100">
+                    <a href="shop-single.html">
+                        <img src="{% static "img/destacado2.jpg" %}" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <ul class="list-unstyled d-flex justify-content-between">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                            <li class="text-muted text-right">$60.000</li>
+                        </ul>
+                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Pegatinas para Motocicletas</a>
+                        <p class="card-text">
+                        Pegatinas duraderas y resistentes al clima, perfectas para personalizar tu moto con estilo. Fácil de aplicar y disponibles en varios diseños.
+                        </p>
+                        <p class="text-muted">Reviews (48)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card h-100">
+                    <a href="shop-single.html">
+                        <img src="{% static "img/destacado3.jpg" %}" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <ul class="list-unstyled d-flex justify-content-between">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                            </li>
+                            <li class="text-muted text-right">$160.000</li>
+                        </ul>
+                        <a href="shop-single.html" class="h2 text-decoration-none text-dark">Intercomunicador</a>
+                        <p class="card-text">
+                        Intercomunicador de alta calidad con conectividad Bluetooth, ideal para comunicación en ruta. Fácil de instalar, con sonido claro y función manos libres.
+                        </p>
+                        <p class="text-muted">Reviews (74)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Featured Product --> {% endcomment %}
+
+
+</body>
+
+</html>
+{% endblock  %}

@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #ffffff; /* color de fondo claro para todo el cuerpo */
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bg-light-grey {
+        background-color: #ffffff; /* color de fondo que coincide con el resto */
+        padding: 30px 0; /* padding para dar espacio */
+    }
+
+    .container {
+        max-width: 1200px; /* ancho máximo de la sección */
+        margin: auto;
+    }
+
+    h1 {
+        color: #28a745; /* color verde para el título */
+        margin-bottom: 20px;
+        font-size: 2.5em; /* tamaño de fuente mayor para el título */
+        font-weight: bold; /* negrita para hacer más llamativo */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* sombra suave para el título */
+    }
+
+    p {
+        line-height: 1.6; /* mayor espacio entre líneas */
+        font-size: 1.1em; /* tamaño de fuente ligeramente mayor */
+    }
+
+    .comparison-section {
+        background-color: #ffffff; /* fondo blanco */
+        padding: 10px; /* padding reducido para menos espacio alrededor de la tabla */
+        border-radius: 10px; /* bordes redondeados para la sección */
+        margin-top: 10px; /* margen superior reducido */
+        margin-bottom: 40px; /* espacio debajo del cuadro */
+    }
+
+    .comparison-table {
+        width: 90%; /* ancho de la tabla reducido */
+        max-width: 600px; /* ancho máximo de la tabla */
+        margin: 0 auto; /* centrar la tabla */
+        border-collapse: collapse;
+        background-color: #ffffff; /* fondo blanco para la tabla */
+        border-radius: 10px; /* bordes redondeados */
+        overflow: hidden; /* para que los bordes redondeados funcionen */
+    }
+
+    .comparison-table th {
+        background-color: #28a745; /* color verde */
+        color: white;
+        padding: 15px;
+        font-size: 1.2em; /* tamaño de fuente mayor */
+    }
+
+    .comparison-table td {
+        padding: 10px; /* padding reducido */
+        text-align: center;
+        border: 1px solid #ddd; /* borde sutil */
+    }
+
+    .checkmark {
+        color: #28a745; /* color verde para el checkmark */
+        font-size: 24px; /* tamaño del checkmark */
+    }
+
+    .crossmark {
+        color: #dc3545; /* color rojo para el crossmark */
+        font-size: 24px; /* tamaño del crossmark */
+    }
+
+    /* Efecto hover para las filas */
+    .comparison-table tr:hover {
+        background-color: #e9f9e9; /* color claro al pasar el mouse */
+    }
+
+    /* Ajuste del espacio vacío */
+    .py-5 {
+        padding-top: 10px !important; /* Reducir espacio superior */
+        padding-bottom: 10px !important; /* Reducir espacio inferior */
+    }
+</style>
+
+<section class="bg-light-grey py-5">
+    <div class="container">
+        <div class="row align-items-center py-5">
+            <div class="text-black text-center">
+                <h1>¿Quiénes Somos Nosotros?</h1>
+                <p>
+                    Bienvenido/a a Credicasco, tu destino online para encontrar todo lo que necesitas para que tus rodadas sean más seguras. Somos tu lugar de elección para descubrir una amplia gama de productos: cascos certificados, chaquetas de protección, cortavientos, intercomunicadores, guantes, llantas para tu motocicleta.
+                    En Credicasco, nos enorgullece ofrecer una selección cuidadosamente curada de artículos de alta calidad. Hacemos envíos a toda Colombia, además con nosotros puedes comprar a crédito sin cuota inicial y con aprobación en minutos. También puedes comprar contra entrega.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="comparison-section">
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Nosotros</th>
+                <th>Otros</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Variedad de productos</td>
+                <td><span class="checkmark">✔</span></td>
+                <td><span class="checkmark">✔</span></td>
+            </tr>
+            <tr>
+                <td>Servicio al cliente</td>
+                <td><span class="checkmark">✔</span></td>
+                <td><span class="crossmark">✖</span></td>
+            </tr>
+            <tr>
+                <td>Precios competitivos</td>
+                <td><span class="checkmark">✔</span></td>
+                <td><span class="crossmark">✖</span></td>
+            </tr>
+            <tr>
+                <td>Política de devoluciones</td>
+                <td><span class="checkmark">✔</span></td>
+                <td><span class="checkmark">✔</span></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+{% endblock %}

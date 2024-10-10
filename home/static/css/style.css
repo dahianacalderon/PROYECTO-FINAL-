@@ -1,0 +1,151 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Fondo claro */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Contenedor de productos */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribución uniforme de productos */
+    padding: 20px;
+}
+
+/* Estilo de cada producto */
+.producto {
+    border: 1px solid #dee2e6; /* Borde gris claro */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación suave */
+    text-align: center; /* Centrar el contenido */
+}
+
+.producto:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Ajuste de las imágenes en productos */
+.producto img {
+    height: 250px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+/* Títulos de productos */
+.producto h2 {
+    font-size: 1.6rem; /* Aumentar el tamaño de la fuente */
+    margin: 10px 0;
+    color: #343a40; /* Color del texto */
+}
+
+/* Descripción y precio */
+.producto p {
+    margin: 10px 0;
+    color: #6c757d; /* Color gris para texto */
+}
+
+/* Precio destacado */
+.precio {
+    font-weight: bold;
+    color: #28a745; /* Color verde */
+    font-size: 1.3rem; /* Tamaño del precio */
+}
+
+/* Botón de añadir al carrito */
+.producto button {
+    background-color: #28a745; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición de color */
+}
+
+.producto button:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Estilo para la lista de botones */
+.list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center; /* Centrar el contenido */
+}
+
+.list-unstyled li {
+    margin: 0 5px; /* Espaciado entre los botones */
+}
+
+/* Estilo del botón del carrito */
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Verde más oscuro */
+}
+
+/* Paginación */
+.pagination {
+    justify-content: center; /* Centrar la paginación */
+}
+
+/* Responsividad - Ajuste para pantallas medianas */
+@media (max-width: 768px) {
+    .producto {
+        width: calc(45% - 20px); /* Dos productos por fila */
+        margin: 10px; /* Espaciado entre productos */
+    }
+}
+
+/* Responsividad - Ajuste para pantallas pequeñas */
+@media (max-width: 576px) {
+    .producto {
+        width: calc(100% - 20px); /* Un producto por fila */
+        margin: 10px; /* Espaciado entre productos */
+    }
+}

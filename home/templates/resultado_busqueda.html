@@ -1,0 +1,19 @@
+<h1>Resultados de búsqueda para: "{{ query }}"</h1>
+
+{% if resultados %}
+    <ul>
+        {% for producto in resultados %}
+            <li>
+                <h2>{{ producto.nombre }}</h2>
+                <p>{{ producto.descripcion }}</p>
+                <p>Precio: ${{ producto.precio }}</p>
+                <p>Stock: {{ producto.stock }}</p>
+                {% if producto.img %}
+                    <img src="{{ producto.img.url }}" alt="{{ producto.nombre }}" style="width: 100px; height: auto;">
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No se encontraron productos que coincidan con tu búsqueda.</p>
+{% endif %}

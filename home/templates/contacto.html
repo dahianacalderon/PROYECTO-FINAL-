@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="contact-container">
+    <div class="contact-header">
+        <h1>Envíanos un mensaje</h1>
+        <p>Comunicate con nosotros por medio de nuestras redes sociales.</p>
+    </div>
+
+    <div class="contact-details">
+        <div class="contact-info">
+            <i class="fas fa-map-marker-alt"></i>
+            <p><strong>Dirección:</strong> CARRERA 6va #24- 92. BARRIO EL CARMEN, Ibagué, Tolima</p>
+        </div>
+        <div class="contact-info">
+            <i class="fas fa-phone"></i>
+            <p><strong>Teléfono:</strong> 3152963230</p>
+        </div>
+        <div class="contact-info">
+            <i class="fas fa-envelope"></i>
+            <p><strong>Email:</strong> CrediCasco@gmail.com</p>
+        </div>
+        <div class="contact-info">
+            <i class="fab fa-facebook"></i>
+            <p><strong>Facebook:</strong> Síguenos en nuestras redes sociales</p>
+        </div>
+    </div>
+
+    <div class="map-section">
+        <iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=450&amp;hl=es&amp;q=CARRERA%206va%20%2324-%2092,%20Barrio%20El%20Carmen,%20Ibagu%C3%A9,%20Tolima+(Credicascos)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    </div>
+
+    {% comment %} <div class="contact-form">
+        <h2>Formulario de Contacto</h2>
+        <form action="process_contact.php" method="post" class="form-centered">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Ingresa tu nombre" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="Escribe tu mensaje" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div> {% endcomment %}
+</div>
+
+<style>
+    .contact-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .contact-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .contact-details {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info i {
+        font-size: 24px;
+        color: #28a745;
+        margin-bottom: 10px;
+    }
+
+    .contact-info p {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .map-section {
+        margin-bottom: 30px;
+    }
+
+    .contact-form {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .contact-form h2 {
+        margin-bottom: 20px;
+    }
+
+    .form-centered {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 20px;
+    }
+
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .form-group textarea {
+        height: 150px;
+        resize: none;
+    }
+
+    .contact-form button {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+        background-color: #218838;
+    }
+</style>
+
+{% endblock %}

@@ -4,25 +4,25 @@
 {% block title %} Registro {% endblock %}
 
 {% block content %}
+
+
     <div class="register-container">
         <div class="register">
-            
-            <h1>Registrate</h1>
+            <h1>Regístrate</h1>
 
             {% if messages %}
-                {% for messages in messages %}
-                    <div class="lert">
-                        {{ messages }}
-                    </div>
+                {% for message in messages %}
+                    <div class="alert" style="color: red;">{{ message }}</div>
                 {% endfor %}
             {% endif %}
 
             <form action="" method="POST">
                 {% csrf_token %}
                 {{ register_form.as_p }}
-                <button>Registrarse</button>
+                <button type="submit">Registrarse</button>
             </form>
-            <a href="{% url "login" %}" class="login-link">¿Ya tienes una cuenta? Inicia sesion aquí</a>
+
+            <a href="{% url 'login' %}" class="login-link">¿Ya tienes una cuenta? Inicia sesión aquí</a>
         </div>
     </div>
 {% endblock %}
